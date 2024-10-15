@@ -8,19 +8,27 @@
 <body>
     <form action="form-handler.php" method="post">
         <label for="subject-name">Име на предмет:</label>
-        <input type="text" id="subject-name" name="subject-name" required><br><br>
+        <input type="text" id="subject-name" name="subject-name" required>
+        
+        <br><br>
 
         <label for="credits">Брой кредити:</label>
-        <input type="number" id="credits" name="credits" required><br><br>
+        <input type="number" id="credits" name="credits" required>
+        
+        <br><br>
 
         <label for="subject-type">Тип на предмета:</label>
         <select id="subject-type" name="subject-type" required>
             <option value="mandatory">Задължителен</option>
             <option value="elective">Избираем</option>
-        </select><br><br>
+        </select>
+        
+        <br><br>
 
         <label for="description">Описание:</label>
-        <textarea id="description" name="description" rows="4" cols="50" required></textarea><br><br>
+        <textarea id="description" name="description" rows="4" cols="50" required></textarea>
+        
+        <br><br>
 
         <button type="submit">Submit</button>
     </form>
