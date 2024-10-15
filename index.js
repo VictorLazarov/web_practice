@@ -1,1 +1,5 @@
-console.log('Hello, world!');
+const btn = document.getElementById('btn');
+
+btn.addEventListener('click', () => {
+    console.log('Submit clicked.');
+});
