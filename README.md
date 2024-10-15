@@ -13,8 +13,6 @@ To run the projects in this repository, you must use [XAMPP](https://www.apachef
 3. Start the Apache and MySQL services from the XAMPP control panel.
 4. Access the projects via `http://localhost/[your-project-folder]`.
 
-## Usage
-
-Follow the instructions provided in each project folder to understand how to run and interact with the specific exercises.
+## Finally
 
 Happy coding!
