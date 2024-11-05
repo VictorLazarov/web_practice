@@ -16,3 +16,7 @@ To run the projects in this repository, you must use [XAMPP](https://www.apachef
 ## Finally
 
 Happy coding!
+
+## Important Note
+
+This repository in no way showcases my abilities in Web Development. It is strictly used for tracking the work during the university course.
