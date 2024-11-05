@@ -29,7 +29,12 @@ loginForm.addEventListener('submit', event => {
     })
     .then(response => response.json())
     .then(result => {
-        const message = document.getElementById('message');
+        let message = document.getElementById('message');
+        if (!message) {
+            message = document.createElement('p');
+            message.id = 'message';
+            loginForm.appendChild(message);
+        }
         message.textContent = result.message;
         message.style.color = result.status === 'success' ? 'green' : 'red';
     })
