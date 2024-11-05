@@ -1,0 +1,32 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    color: #0056b3;
+}
+
+p {
+    font-size: 16px;
+}
+
+p.highlight {
+    background-color: yellow;
+}
+
+p#unique {
+    color: red;
+}
+
+ul {
+    list-style-type: square;
+    padding-left: 20px;
+}
+
+ul li {
+    margin: 5px 0;
+}
