@@ -12,4 +12,5 @@ form.addEventListener('submit', (e) => {
     const messageText = `Предмет: ${subjectName}, Кредити: ${credits}, Тип: ${subjectType}, Описание: ${description}. Записан сте успешно!`;
     
     message.textContent = messageText;
+    message.style.display = 'block';
 });
