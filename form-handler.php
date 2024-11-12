@@ -5,11 +5,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $subjectType = htmlspecialchars($_POST['subject-type']);
     $description = htmlspecialchars($_POST['description']);
 
-    echo "Subject Name: $subjectName<br>";
-    echo "Credits: $credits<br>";
-    echo "Subject Type: $subjectType<br>";
-    echo "Description: $description<br>";
+    $response = array(
+        "subjectName" => $subjectName,
+        "credits" => $credits,
+        "subjectType" => $subjectType,
+        "description" => $description,
+        "message" => "Записан сте успешно!"
+    );
+
+    header('Content-Type: application/json');
+    echo json_encode($response);
 } else {
-    echo "Invalid request method.";
+    echo json_encode(array("message" => "Invalid request method."));
 }
 ?>
