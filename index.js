@@ -17,8 +17,9 @@ form.addEventListener('submit', (e) => {
         const subjectType = result.subjectType;
         const description = result.description;
         const messageText = result.message;
+        const isMandatory = result.isMandatory;
 
-        message.innerHTML = `Subject Name: ${subjectName}<br/>Credits: ${credits}<br/>Subject Type: ${subjectType}<br/>Description: ${description}<br/>Message: ${messageText}`;
+        message.innerHTML = `Subject Name: ${subjectName}<br/>Credits: ${credits}<br/>Subject Type: ${subjectType}<br/>Description: ${description}<br/>isMandatory: ${isMandatory}<br/>Message: ${messageText}`;
         message.style.display = 'block';
     });
 });
