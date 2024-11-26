@@ -12,28 +12,27 @@ document.addEventListener('DOMContentLoaded', () => {
             password: formData.get('password'),
         };
 
-        try {
-            fetch('../backend/api/registration/registration.php', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(data)
-            })
-            .then(response => response.json())
-            .then(result => {
-                const message = document.getElementById('message');
-                const status = result.status;
-                if (status === 'SUCCESS') {
-                    message.textContent = result.message;
-                    form.reset();
-                }
+        fetch('../backend/api/registration/registration.php', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+        .then(response => response.json())
+        .then(result => {
+            const message = document.getElementById('message');
+            const status = result.status;
+            if (status === 'SUCCESS') {
                 message.textContent = result.message;
-                message.style.display = 'block';
-                message.style.color = status === 'SUCCESS' ? 'green' : 'red';
-            });
-        } catch (error) {
-            alert('Възникна грешка при регистрацията.');
-        }
+                form.reset();
+            }
+            message.textContent = result.message;
+            message.style.display = 'block';
+            message.style.color = status === 'SUCCESS' ? 'green' : 'red';
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
     });
 });
